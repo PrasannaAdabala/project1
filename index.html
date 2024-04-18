@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hotstar</title>
+    <script src="https://kit.fontawesome.com/f80f7fec64.js" crossorigin="anonymous"></script> 
+   
+    <style>
+          body {
+             background-color: black;
+            
+        }  
+
+        .k {
+             overflow-y:  none;
+            height: 100vh;
+            width: 100vw;
+             background-color: black; 
+             overflow-x: hidden;
+        }
+
+        .md {
+            position: fixed;
+
+        }
+
+        .md1 {
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            position: fixed;
+            padding-top: 20px;
+            text-decoration: none;
+            
+
+           
+           }
+          
+           .md1 a:nth-child(2):hover::after{
+            content: "My Space";
+            font-size: 15px;
+            margin-left: 12px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+           .md1 a:nth-child(3):hover::after{
+            content: "Search";
+            font-size: 15px;
+            margin-left: 12px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+           .md1 a:nth-child(4):hover::after{
+            content: "Home";
+            font-size: 15px;
+            margin-left: 12px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+           .md1 a:nth-child(5):hover::after{
+            content: "TV";
+            font-size: 15px;
+            margin-left: 12px;
+            
+            font-family: 'Courier New', Courier, monospace;
+           }
+           .md1 a:nth-child(6):hover::after{
+            content: "Movies";
+            font-size: 15px;
+            margin-left: 12px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+           .md1 a:nth-child(7):hover::after{
+            content: "Sports";
+            font-size: 15px;
+            margin-left: 12px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+           .md1 a:nth-child(8):hover::after{
+            content: "Categories";
+            font-size: 15px;
+            margin-left: 12px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+        
+
+        .md2 {
+
+            text-decoration: none;
+            color: gold;
+            position: relative;
+            top: 30px;
+        }
+        .md3 {
+            color: aliceblue;
+           
+        
+        }
+
+        /* nav {
+
+            width: 100px;
+        } */
+
+        .md3 {
+            position: relative;
+            left: 100px;
+            top: -90px;
+           
+           
+        }
+        
+
+         .md4 {
+            position: relative;
+            top: -300px;
+            left: 100px;
+            width: 300px;
+            }
+            .t1{
+                color: rgb(127, 255, 129);
+            }
+            .md5{
+                position: relative;
+                top: -320px;
+                left: 60px;
+                width: 300px;
+                color: yellow;
+            }
+            .t2{
+                color: aliceblue;
+                
+            }
+            .md6{
+                position: relative;
+            top: -329px;
+            left: 60px;
+            width: 300px;
+
+            }
+            .md7{
+                position: relative;
+            top: -330px;
+            left: 65px;
+            width: 300px;
+            color: rgb(0, 179, 255);
+
+            }
+            .md8{
+                position: relative;
+            top: -375px;
+            left: 115px;
+            width: 300px;
+
+            }
+            .md9{
+                position: relative;
+            top: -410px;
+            left: 125px;
+            width: 300px;
+
+            }
+            .md10{
+                position: relative;
+            top: -452px;
+            left: 220px;
+            width: 300px;
+
+            }
+            .md11{
+                position: relative;
+            top: -488px;
+            left: 230px;
+            width: 300px;
+
+            }
+            .md12{
+                position: relative;
+            top: -488px;
+            left: 60px;
+            width: 350px;
+
+            }
+           .k2 {
+            position: relative;
+            top: -420px;
+            left: 0px;
+            width: 300px;
+
+        }
+        h1{
+            text-decoration: none;
+        }
+        
+       
+        .k3{
+            position: relative;
+            top: -430px;
+            display: flex;
+            flex-direction:row;
+           column-gap: 20px;
+          
+        }
+        img:hover{
+            transform: scale(1.2);
+        }
+       .k5{
+        position: relative;
+        top: -300px;
+        width: 300px;
+       }
+       .k6{
+        position: relative;
+        top: -300px;
+        width: 300px;
+        display: flex;
+       column-gap: 20px;
+        }
+         ::-webkit-scrollbar{
+            display: none;
+         } 
+         
+        
+         .t4{
+             position: relative;
+        top: -490px;
+        left: 60px;
+        width: 300px; 
+        display: flex;
+        column-gap: 10px;
+        }
+        .t5{
+            position: relative;
+        top: -490px;
+        left: 60px;
+        width: 300px;
+        height: 40px;
+         background-color: rgba(128, 128, 128, 0.356);
+         color: aliceblue;
+         border: rgba(128, 128, 128, 0.356) ;
+            
+        }
+        .t6{
+            position: relative;
+        top: -490px;
+        left: 60px;
+        height: 40px;
+        width: 30px;
+        background-color: rgba(128, 128, 128, 0.356);
+         color: aliceblue;
+         border: rgba(128, 128, 128, 0.356) ;
+           
+            
+        }
+       
+        .main{
+            position: relative;
+            top: -150px;
+        }
+        .main1{
+            position: relative;
+            top: -200px;
+
+        }
+        .main2{
+            position: relative;
+            top: -360px;
+
+        }
+        .r7{
+            color: aliceblue;
+          position: absolute;
+          left: 100px;
+          top: -300px;
+          display: flex;
+          flex-direction: row;
+          width: 1000px;
+          justify-content: space-between;
+        }
+        .r8{
+            color: aliceblue; 
+            position: absolute;
+          left: 100px;
+          top: -270px;
+           display: flex;
+          flex-direction: row;
+          width: 1000px;
+          justify-content: space-between;  
+        }
+        .r9{
+            color: darkgray;
+           
+        }
+        .r10{
+            position: relative;
+            left: 45px;
+            color: darkgray;
+        }
+        .r11{
+            position: relative;
+            left: 85px;
+            color: darkgray;
+        }
+        .r12{
+            color: darkgray;
+            position: relative;
+            left: 100px;
+            top: -250px;
+        }
+        .r13{
+            color: darkgray;
+            position: relative;
+            left: 690px;
+            top: -280px;
+            width: 200px;
+        }
+         .r14{
+          display: flex;
+          position: absolute;
+          left: 850px;
+          top: -250px;
+        } 
+        .t3{
+            height: 600px;
+            width: 1500px;
+        }
+        .p5{
+        position: relative;
+        top: -300px;
+        width: 400px;
+       }
+        
+       
+       
+       
+         
+        </style>
+</head>
+
+<body> 
+
+    <div class="k">
+        <nav>
+            <div class="md"> 
+               <a href="./subsribe.html"> <img src="https://img.hotstar.com/image/upload/v1656431456/web-images/logo-d-plus.svg"></a>
+            </div>
+            <div class="md1">
+                <a href="./subsribe.html" class="md2">subscribe</a>
+                <a href="./myspace.html" <i class="fa-solid fa-circle-user" style="text-decoration: none; color: white;" ></i> </a>
+                <a href="./serach.html" <i class="fa-solid fa-magnifying-glass" style="text-decoration: none; color: white;"></i></a>
+                <a href="./project.html" <i class="fa-solid fa-house" style="text-decoration: none; color: white;"></i></a>
+                <a href="./tv.html" <i class="fa-solid fa-tv" style="text-decoration: none; color: white;"></i></a>
+                <a href="./movies.html" <i class="fa-solid fa-film" style="text-decoration: none;color: white;"></i></a>
+                <a href="./sports.html" <i class="fa-solid fa-volleyball" style="text-decoration: none;color: white;"></i></a>
+                <a href="./categories.html" <i class="fa-solid fa-list" style="text-decoration: none; color: white;"></i></a>
+            </div>
+            </nav>
+           
+            <div class="md3">
+                <div class="displycontainer">
+                <div class="t3">
+                 <video  autoplay  loop muted height="600" width="950">     
+                    <source src="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com).mp4" download="movie" >
+                </video></div>
+                <div class="main">
+                        <h4 class="md4">hotstar <span class="t1">Specials</span></h4>
+                        <h1 class="md5">SAVE <SPAN class="t2">The </SPAN>TIGERS</h1>
+                        <h4 class="md7">New Season</h4>
+                        <h3 class="md6">2024 </h3>
+                        <h3 class="md8">. </h3>
+                        <h3 class="md9">2 Seasons </h3>
+                        <h3 class="md10">. </h3>
+                        <h3 class="md11">7 Languages </h3>
+
+                        <p class="md12">What happens when three frustrated husbands loudly<br>
+                             rant about their marital woes in a bar?They become the news.</p>
+                       <div class="t4">
+                         <h3 >Comedy</h3>
+                        <h3 >| Drama</h3>
+                        <h3>| Family</h3>
+                        <h3>| Goofy</h3>
+                    </div>
+                    <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com).mp4""><button  class="t5">Watch Now</button></a>
+                    <button class="t6">+</button>
+                </div>
+                </div>
+
+
+                 <div class="main1">  
+              
+                <h1 class="k2">Latest Releases</h1>
+                <div class="k3">
+                    <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2866/1711649602866-v" height="200px" width="100px"></a>
+                    <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3867/1711119283867-v" height="200px"width="100" ></a>
+                
+                        <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9303/1710437109303-v" height="200px"width="200"></a>
+                            <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2866/1711649602866-v" height="200px" width="200px"></a>
+                                <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3867/1711119283867-v" height="200px"width="200" ></a>
+                
+                                    <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9303/1710437109303-v" height="200px"width="200"></a>
+                                        <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2866/1711649602866-v" height="200px" width="200px"></a>
+                                            <a href="./Save-The-Tigers-S01-E03-2023 (online-video-cutter.com) (1).mp4"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/3867/1711119283867-v" height="200px"width="200" ></a>
+           
+            </div>
+            </div>
+            <div class="main2">
+            <h1 class="k5">Best in Sports</h1>
+            <div class="k6">
+            <div class="k7"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2055/1711788412055-h"height="200" width="200"></div>
+            <div class="k8"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6719/1711916346719-h"height="200" width="200"></div>
+            <div class="k9"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5549/1711874205549-h"height="200" width="200"></div>
+            <div class="k10"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5356/1711897015356-h" height="200" width="200"></div>
+            <div class="k11"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2055/1711788412055-h" height="200" width="200"></div>
+
+            </div>
+        </div>
+        <div class="main2">
+            <h1 class="k5" >Free Newly Added</h1>
+            <div class="k6">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4963/1474963-i-c484075786f0"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/833/1650833-i-0fe6a37d72ce"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1791/1611791-i-3b22c4f693bd"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/5551/1625551-i-0ec1f6f1bcf3"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4963/1474963-i-c484075786f0"height="200" width="200">
+        </div>
+    </div>
+    <div class="main2">
+        <h1 class="k5">Popular Shows</h1>
+        <div class="k6">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7039/1657039-i-7e85e8fda27e" height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6618/1546618-i-1260824ab933" height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4715/1711159654715-i" height="200" width="200">
+            <img src=" https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/819/1440819-i-b6b1aed4d16b"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7039/1657039-i-7e85e8fda27e" height="200" width="200">
+
+        </div>
+    </div>
+    <div class="main2">
+        <h1 class="k5">Popular in Travel</h1>
+        <div class="k6">
+        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4731/1514731-i-97024bbe438e"height="200" width="200">
+        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2596/1422596-i-6ff6868b2d3d"height="200" width="200">
+        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/655/1420655-i-f72d71db3006"height="200" width="200">
+        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9639/1619639-i-e97c644b8fc9"height="200" width="200">
+        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4731/1514731-i-97024bbe438e"height="200" width="200">
+
+        </div>
+    </div>
+    <div class="main2">
+        <h1 class="k5">Popular in TalkShow</h1>
+        <div class="k6">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/583/1660583-i-b81a13faa0fd"height="200" width="200"></a>
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/568/1420568-i-bbf77de164b8"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/606/1420606-i-4ce880dc13bb"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1223/1641223-i-c5903cd06d20"height="200" width="200">
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4731/1514731-i-97024bbe438e"height="200" width="200">
+
+            </div>
+            </div>
+            <div class="main2">
+            <h1 class="p5">Foreign Dubbed Movies</h1>
+            <div class="k6">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/8047/1428047-i-6285836b07c7"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/8092/1711690428092-i"height="200" width="200">
+                <img src=""height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9492/1509492-i-0a4a8bdd8825"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/723/1440723-i-c19e40879996"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/8047/1428047-i-6285836b07c7"height="200" width="200">
+                
+            </div>
+        </div>
+        <div class="main2">
+         <h1 class="k5">Thriller Tales</h1>
+            <div class="k6">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/8730/1707996958730-i"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2977/1642977-i-6a5b70988cfb"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/8730/1707996958730-i"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2977/1642977-i-6a5b70988cfb"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/723/1440723-i-c19e40879996"height="200" width="200">
+               
+                
+            </div>
+            </div>
+            <div class="main2">
+            <h1 class="k5">Popular Languages</h1>
+            <div class="k6">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6685/1526685-a-5f5995a53f61"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6659/1526659-a-7271cf19114e"height="200" width="200"></div>
+                </div>
+                <div class="main2">
+                 <h1 class="k5">Popular channels</h1>
+                 <div class="k6">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5227/1535227-a-93d6f25ed745"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4940/1424940-a-6486777c0aa5"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4939/1424939-a-ed900757fe95"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4955/1424955-a-832227cfe913"height="200" width="200">
+                <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4941/1424941-a-b57c5a18e60c"height="200" width="200"> 
+               
+             </div>   
+            </div>
+            </div>
+            <div class="main2">
+                <div class="r7">
+                <h3 >Company</h3>
+                <h3>View Website in</h3>
+                 <h3>Need Help?</h3> 
+                 <h3>Connect with Us</h3> 
+            </div>
+        </div>
+        <div class="main2">
+            <div class="r8">
+            <p  class="r9">About Us</p>
+            <p class="r10">English</p>
+             <p class="r11">Visit Help Center</p> 
+             <a href="https://www.facebook.com/DisneyPlusHotstar"> <i class="fa-brands fa-facebook-f" style="position: absolute; left: 900px; top: 25px;"></i></a>
+            <a href="https://twitter.com/DisneyPlusHS"> <i class="fa-brands fa-twitter"  style="position: absolute; left: 930px; top: 25px;"></i>  </a>
+        </div>
+    </div>
+    <div class="main2">
+       
+            <p class="r12">Careers</p>
+            <p class="r13">Share Feedback</p>
+       
+    </div>
+     <div class="main2">
+        <div class="r14">
+      <a href="https://play.google.com/store/apps/details?id=in.startv.hotstar"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_256/v1661346101/google-playstore" height="50" width="100"></a>
+     <a href="https://itunes.apple.com/in/app/hotstar/id934459219?mt=8"> <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_256/v1661346071/ios-appstore" height="50" width="100"></a> 
+    </div>
+    </div>
+</div>
+</body>
+</html>
